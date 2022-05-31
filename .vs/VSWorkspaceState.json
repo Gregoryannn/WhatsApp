@@ -1,7 +1,10 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\src",
+    "\\src\\components",
+    "\\src\\components\\Sidebar"
   ],
-  "SelectedNode": "\\C:\\Users\\asus\\Source\\Repos\\whatsapp-clone",
+  "SelectedNode": "\\src\\components\\Sidebar\\index.js",
   "PreviewInSolutionExplorer": false
 }
