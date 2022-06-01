@@ -3,8 +3,8 @@
     "",
     "\\src",
     "\\src\\components",
-    "\\src\\components\\Sidebar"
+    "\\src\\components\\styles"
   ],
-  "SelectedNode": "\\src\\components\\Sidebar\\index.js",
+  "SelectedNode": "\\src\\components\\styles\\Sidebar.css",
   "PreviewInSolutionExplorer": false
 }
