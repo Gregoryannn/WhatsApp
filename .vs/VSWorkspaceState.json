@@ -3,8 +3,8 @@
     "",
     "\\src",
     "\\src\\components",
-    "\\src\\components\\styles"
+    "\\src\\styles"
   ],
-  "SelectedNode": "\\src\\components\\styles\\Sidebar.css",
+  "SelectedNode": "\\src\\styles\\Chat.css",
   "PreviewInSolutionExplorer": false
 }
