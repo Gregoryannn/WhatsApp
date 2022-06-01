@@ -38,7 +38,6 @@ const Chat = () => {
                         {new Date().toUTCString()}
                     </span>
                 </p>
-
                 <p className="chat__message chat__receiver">
                     <span className="chat__name">Caia</span>
                     This si a message
@@ -48,6 +47,21 @@ const Chat = () => {
                 </p>
             </div>
 
+            <div className="chat__footer">
+                <InsertEmoticon />
+                <form>
+                    <input
+                        value={input}
+                        onChange={(e) => setInput(e.target.value)}
+                        placeholder="Type a message"
+                        type="text"
+                    />
+                    <button onClick={sendMessage} type="submit">
+                        Send a message
+                    </button>
+                </form>
+                <Mic />
+            </div>
         </div>
     );
 }
