@@ -9,7 +9,7 @@ import {
 const Message = ({ msg }) => {
     const { name, message, timestamp, received } = msg;
 
-    if (!received) {
+    if (received) {
         return (
             <MessageSent>
                 <Name>{name}</Name>
