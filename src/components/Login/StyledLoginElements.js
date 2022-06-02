@@ -26,6 +26,6 @@ export const TextWrap = styled.div``
 export const ButtonIcon = styled(Button)`
     margin-top: 5vh !important;
     text-transform: inherit !important;
-    background-color: #0a8d48 !important;
+    background-color: #29a71a !important;
     color: white !important;
 `; 
