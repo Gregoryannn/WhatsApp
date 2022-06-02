@@ -1,10 +1,10 @@
 import { Avatar, IconButton } from "@material-ui/core";
 import React from 'react'
-import { ChatIcon, DonutLargeIcon, HeaderContainer, HeaderRight, MoreVertIcon } from './StyledSidebarElements'
+import { ChatIcon, DonutLargeIcon, HeaderWrap, HeaderRight, MoreVertIcon } from './StyledSidebarElements'
 
 const Header = () => {
     return (
-        <HeaderContainer>
+        <HeaderWrap>
             <Avatar src="" alt="avatar" />
             <HeaderRight>
                 <IconButton>
@@ -17,7 +17,7 @@ const Header = () => {
                     <MoreVertIcon />
                 </IconButton>
             </HeaderRight>
-        </HeaderContainer>
+        </HeaderWrap>
     );
 }
 

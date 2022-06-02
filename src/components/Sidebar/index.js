@@ -1,16 +1,11 @@
 import React from "react";
-import { Avatar, IconButton } from "@material-ui/core";
 
 import {
     Container,
-    SearchOutlinedIcon,
-    Searchbar,
-    SearchContainer,
-    SearchInput,
     ChatCardsContainer,
 } from "./StyledSidebarElements";
 
-import ChatCard from "./ChatCards";
+import ChatCard from "./ChatCard";
 import Header from "./Header";
 import Search from "./Search";
 
@@ -21,6 +16,9 @@ const SideBar = () => {
            
             <Header />
             <Search />
+            <ChatCardsContainer>
+
+            </ChatCardsContainer>
         </Container>
     );
 };

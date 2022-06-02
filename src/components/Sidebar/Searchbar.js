@@ -1,9 +1,9 @@
 import React from 'react'
-import { Searchbar, SearchContainer, SearchInput, SearchOutlinedIcon } from './StyledSidebarElements';
+import { SearchbarWrap, SearchContainer, SearchInput, SearchOutlinedIcon } from './StyledSidebarElements';
 
 const Search = () => {
     return (
-        <Searchbar>
+        <SearchbarWrap>
             <SearchContainer>
                 <SearchOutlinedIcon />
                 <SearchInput
@@ -11,7 +11,7 @@ const Search = () => {
                     type="text"
                 />
             </SearchContainer>
-        </Searchbar>
+        </SearchbarWrap>
     );
 }
 

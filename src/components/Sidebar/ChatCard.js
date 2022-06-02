@@ -1,18 +1,21 @@
 import React from 'react';
-import { ChatCardContainer, ChatCardInfo } from "./StyledSidebarElements";
+import {
+    ChatCardWrap,
+    ChatCardInfo,
+} from "./StyledSidebarElements";
 
 import { Avatar } from "@material-ui/core";
 
-const ChatCard = () => {
+const ChatCards = () => {
     return (
-        <ChatCardContainer>
+        <ChatCardWrap>
             <Avatar src="" alt="avatar" />
             <ChatCardInfo>
                 <h2>Room name</h2>
                 <p>This is the last message</p>
             </ChatCardInfo>
-        </ChatCardContainer>
+        </ChatCardWrap>
     );
 }
 
-export default ChatCard;
+export default ChatCards;
