@@ -54,13 +54,13 @@ export const SearchInput = styled.input`
     outline-width: 0;
     margin-left: 10px;
 `
-export const ChatCardsContainer = styled.div`
+export const ChatContainer = styled.div`
     flex: 1;
     background-color: white;
     overflow: scroll;
 `
 
-export const ChatCardWrap = styled.div`
+export const ChatCard = styled.div`
 display: flex;
 padding: 20px;
 cursor: pointer;
