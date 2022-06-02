@@ -8,7 +8,7 @@ import {
     SearchOutlined,
 } from "@material-ui/icons";
 
-const Header = () => {
+const Header = ({ roomName }) => {
     const [seed, setSeed] = useState("");
 
     useEffect(() => {
@@ -20,7 +20,7 @@ const Header = () => {
                 src={`https://avatars.dicebear.com/api/human/${seed}.svg`}
                 alt="avatar"
             />            <HeaderInfo>
-                <h3>Room name</h3>
+                <h3>{roomName}</h3>
                 <p>Lase seen at...</p>
             </HeaderInfo>
             <HeaderRight>
@@ -36,6 +36,7 @@ const Header = () => {
             </HeaderRight>
         </HeaderContainer>
     );
-}
+
+};
 
 export default Header

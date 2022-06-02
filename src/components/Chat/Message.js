@@ -8,8 +8,6 @@ import {
 
 const Message = ({ msg }) => {
     const { name, message, timestamp, received } = msg;
-        // console.log(msg)
-
     if (received) {
         return (
             <MessageRceived >

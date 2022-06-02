@@ -1,6 +1,8 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import { useParams } from 'react-router-dom'
 
 import axios from "../../axios";
+import db from '../../firebase';
 
 import { Container } from './StyledChatElements'
 import Header from "./Header";
@@ -9,6 +11,18 @@ import Footer from "./Footer";
 
 const Chat = ({ messages }) => {
     const [input, setInput] = useState("");
+    const { roomId } = useParams();
+    const [roomName, setRoomName] = useState('');
+
+    useEffect(() => {
+        if (roomId) {
+            db.collection("rooms")
+                .doc(roomId)
+                .onSnapshot((snapshot) => {
+                    setRoomName(snapshot.data().name);
+                });
+        }
+    }, [roomId]);
 
     const sendMessage = async (e) => {
         e.preventDefault();
@@ -25,7 +39,7 @@ const Chat = ({ messages }) => {
 
     return (
         <Container>
-            <Header />
+            <Header roomName={roomName} />
             <Body messages={messages} />
             <Footer
                 input={input}

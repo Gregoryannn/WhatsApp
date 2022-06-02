@@ -36,9 +36,12 @@ const App = () => {
     return (
         <Main>
             <Router>
+                <Sidebar />
                 <Switch>
+                    <Route path="/rooms/:roomId">
+                        <Chat messages={messages} />
+                    </Route>
                     <Route path="/">
-                        <Sidebar />
                         <Chat messages={messages} />
                     </Route>
                 </Switch>
