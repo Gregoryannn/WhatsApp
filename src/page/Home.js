@@ -34,9 +34,9 @@ const Home = () => {
     return (
         <Main>
             <Sidebar />
-            <Chat />
+            <Chat messages={messages} />
         </Main>
-    )
+    );
 }
 
 const Main = styled.main`
