@@ -1,14 +1,14 @@
 import React from 'react'
-import { BodyContainer } from './StyledChatElements'
+import { MessageContainer } from './StyledChatElements'
 import Message from './Message'
 
 const Body = ({ messages }) => {
     return (
-        <BodyContainer>
+        <MessageContainer>
             {messages.map((msg) => (
                 <Message msg={msg} />
             ))}
-        </BodyContainer>
+        </MessageContainer>
     );
 }
 

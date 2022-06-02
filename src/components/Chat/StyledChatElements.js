@@ -34,16 +34,16 @@ export const HeaderInfo = styled.div`
     }
 `
 
-export const BodyContainer = styled.div`
+export const MessageContainer = styled.div`
     flex: 1;
     background-image: url("https://user-images.githubusercontent.com/15075759/28719144-86dc0f70-73b1-11e7-911d-60d70fcded21.png");
     background-repeat: repeat;
     background-position: center;
     padding: 30px;
     overflow: scroll;
-`
+`;
 
-export const MessageSent = styled.div`
+export const MessageSent = styled(MessageRceived)`
     position: relative;
     font-size: 16px;
     padding: 10px;

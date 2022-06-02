@@ -1,7 +1,7 @@
 import React from 'react';
 import {
+    MessageRceived,
     MessageSent,
-    MessageReceived,
     Name,
     Timestamp,
 } from "./StyledChatElements";
@@ -11,19 +11,19 @@ const Message = ({ msg }) => {
 
     if (received) {
         return (
+            <MessageRceived>
+                <Name>{name}</Name>
+                {message}
+                <Timestamp>{timestamp}</Timestamp>
+            </MessageRceived>
+        );
+    } else {
+        return (
             <MessageSent>
                 <Name>{name}</Name>
                 {message}
                 <Timestamp>{timestamp}</Timestamp>
             </MessageSent>
-        );
-    } else {
-        return (
-            <MessageReceived>
-                <Name>{name}</Name>
-                {message}
-                <Timestamp>{timestamp}</Timestamp>
-            </MessageReceived>
         );
     }
 }
