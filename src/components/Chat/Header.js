@@ -1,5 +1,5 @@
+import React, { useEffect, useState } from "react";
 import { Avatar, IconButton } from "@material-ui/core";
-import React from 'react'
 import { HeaderContainer, HeaderInfo, HeaderRight } from "./StyledChatElements";
 
 import {
@@ -9,10 +9,17 @@ import {
 } from "@material-ui/icons";
 
 const Header = () => {
+    const [seed, setSeed] = useState("");
+
+    useEffect(() => {
+        setSeed(Math.floor(Math.random() * 100));
+    }, []);
     return (
         <HeaderContainer>
-            <Avatar src="" alt="avatar" />
-            <HeaderInfo>
+            <Avatar
+                src={`https://avatars.dicebear.com/api/human/${seed}.svg`}
+                alt="avatar"
+            />            <HeaderInfo>
                 <h3>Room name</h3>
                 <p>Lase seen at...</p>
             </HeaderInfo>
