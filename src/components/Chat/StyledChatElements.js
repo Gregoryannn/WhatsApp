@@ -1,26 +1,24 @@
-import styled from 'styled-components'; import styled from 'styled-components';
-import {
-    InsertEmoticon,
-    Mic,
-} from "@material-ui/icons";
+import styled from "styled-components";
+import { InsertEmoticon, Mic } from "@material-ui/icons";
+
 
 export const Container = styled.div`
     display: flex;
     flex-direction: column;
     flex: 0.65;
-`
+`;
 export const HeaderContainer = styled.div`
     display: flex;
     padding: 20px;
     align-items: center;
     border-bottom: 1px solid lightgray;
-`
+`;
 export const HeaderRight = styled.div`
     display: flex;
     align-items: center;
     justify-content: space-between;
     min-width: 10vw;
-`
+`;
 
 export const HeaderInfo = styled.div`
     flex: 1;
@@ -32,7 +30,7 @@ export const HeaderInfo = styled.div`
     p {
         color: gray;
     }
-`
+`;
 
 export const MessageContainer = styled.div`
     flex: 1;
@@ -51,7 +49,7 @@ export const MessageSent = styled(MessageRceived)`
     border-radius: 10px;
     background-color: #ffffff;
     margin-bottom: 30px;
-`
+`;
 
 export const Name = styled.span`
     position: absolute;
@@ -74,7 +72,7 @@ export const FooterContainer = styled.div`
     align-items: center;
     height: 62px;
     border-top: 1px solid lightgray;
-`
+`;
 
 export const Form = styled.form`
     flex: 1;
@@ -95,9 +93,9 @@ export const Button = styled.button`
 export const InsertEmoticonIcon = styled(InsertEmoticon)`
     padding: 10px;
     color: gray;
-`
+`;
 
 export const MicIcon = styled(Mic)`
     padding: 10px;
     color: gray;
-` 
+`;

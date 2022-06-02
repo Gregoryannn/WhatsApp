@@ -6,7 +6,7 @@ const Body = ({ messages }) => {
     return (
         <MessageContainer>
             {messages.map((msg) => (
-                <Message msg={msg} />
+                <Message key={msg._id} id={msg._id} msg={msg} />
             ))}
         </MessageContainer>
     );

@@ -8,18 +8,18 @@ import {
 
 const Message = ({ msg }) => {
     const { name, message, timestamp, received } = msg;
+        // console.log(msg)
 
     if (received) {
         return (
-            <MessageRceived>
+            <MessageRceived >
                 <Name>{name}</Name>
                 {message}
                 <Timestamp>{timestamp}</Timestamp>
             </MessageRceived>
         );
-    } else {
         return (
-            <MessageSent>
+            <MessageSent >
                 <Name>{name}</Name>
                 {message}
                 <Timestamp>{timestamp}</Timestamp>
