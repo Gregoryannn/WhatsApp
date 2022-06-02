@@ -1,5 +1,5 @@
-import "./App.css";
 import React, { useEffect, useState } from "react";
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import styled from "styled-components";
 import Pusher from "pusher-js";
 import axios from "./axios";
@@ -33,12 +33,16 @@ const App = () => {
     }, [messages]);
 
     return (
-        <div className="app">
-            <Main>
-                <Sidebar />
-                <Chat messages={messages} />
-            </Main>
-        </div>
+        <Main>
+            <Router>
+                <Switch>
+                    <Route path="/">
+                        <Sidebar />
+                        <Chat messages={messages} />
+                    </Route>
+                </Switch>
+            </Router>
+        </Main>
     );
 };
 
@@ -47,7 +51,7 @@ export default App;
 const Main = styled.main`
     display: flex;
     background-color: #ededed;
-    margin: auto;
+    margin: 5vh auto;
     height: 90vh;
     width: 90vw;
     box-shadow: -1px 4px 20px -6px rgba(0, 0, 0, 0.75);
