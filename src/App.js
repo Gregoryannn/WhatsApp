@@ -1,15 +1,17 @@
 import React, { useEffect, useState } from "react";
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import styled from "styled-components";
-
 import Pusher from "pusher-js";
 import axios from "./axios";
 
 import Sidebar from "./components/Sidebar";
 import Chat from "./components/Chat";
+import Login from "./components/Login";
 
 const App = () => {
     const [messages, setMessages] = useState([]);
+    const [user, setUser] = useState(null)
+
     useEffect(() => {
         axios.get("/messages/sync")
             .then((res) => {
@@ -29,22 +31,25 @@ const App = () => {
             channel.unsubscribe();
         };
     }, [messages]);
-
     console.log(messages)
 
     return (
         <Main>
-            <Router>
-                <Sidebar />
-                <Switch>
-                    <Route path="/rooms/:roomId">
-                        <Chat messages={messages} />
-                    </Route>
-                    <Route path="/">
-                        <Chat messages={messages} />
-                    </Route>
-                </Switch>
-            </Router>
+            {!user ? (
+                <Login />
+            ) : (
+                <Router>
+                    <Sidebar />
+                    <Switch>
+                        <Route path="/rooms/:roomId">
+                            <Chat messages={messages} />
+                        </Route>
+                        <Route path="/">
+                            <Chat messages={messages} />
+                        </Route>
+                    </Switch>
+                </Router>
+            )}
         </Main>
     );
 };
