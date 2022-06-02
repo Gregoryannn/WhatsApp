@@ -1,15 +1,17 @@
 import React from 'react'
 import { Avatar } from "@material-ui/core";
 import { Chat, DonutLarge, MoreVert } from "@material-ui/icons";
+
 import {
     HeaderWrap,
     HeaderRight,
     ButtonWrap,
 } from "./StyledSidebarElements";
-const Header = () => {
+
+const Header = ({ user }) => {
     return (
         <HeaderWrap>
-            <Avatar src="" alt="avatar" />
+            <Avatar src={user?.photoURL} alt="avatar" />
             <HeaderRight>
                 <ButtonWrap>
                     <DonutLarge />
