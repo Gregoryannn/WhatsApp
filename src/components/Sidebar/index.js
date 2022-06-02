@@ -16,8 +16,10 @@ const SideBar = () => {
             <Header />
             <Searchbar />
             <ChatCardsContainer>
+                <ChatCard addNewChat />
                 <ChatCard />
-            </ChatCardsContainer>
+                <ChatCard />
+                <ChatCard />            </ChatCardsContainer>
         </Container>
     );
 };
