@@ -1,21 +1,25 @@
-import { Avatar, IconButton } from "@material-ui/core";
 import React from 'react'
-import { ChatIcon, DonutLargeIcon, HeaderWrap, HeaderRight, MoreVertIcon } from './StyledSidebarElements'
-
+import { Avatar } from "@material-ui/core";
+import { Chat, DonutLarge, MoreVert } from "@material-ui/icons";
+import {
+    HeaderWrap,
+    HeaderRight,
+    ButtonWrap,
+} from "./StyledSidebarElements";
 const Header = () => {
     return (
         <HeaderWrap>
             <Avatar src="" alt="avatar" />
             <HeaderRight>
-                <IconButton>
-                    <DonutLargeIcon />
-                </IconButton>
-                <IconButton>
-                    <ChatIcon />
-                </IconButton>
-                <IconButton>
-                    <MoreVertIcon />
-                </IconButton>
+                <ButtonWrap>
+                    <DonutLarge />
+                </ButtonWrap>
+                <ButtonWrap>
+                    <Chat />
+                </ButtonWrap>
+                <ButtonWrap>
+                    <MoreVert />
+                </ButtonWrap>
             </HeaderRight>
         </HeaderWrap>
     );

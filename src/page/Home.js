@@ -42,7 +42,7 @@ const Home = () => {
 const Main = styled.main`
     display: flex;
     background-color: #ededed;
-    margin-top: -50px;
+    margin: auto;
     height: 90vh;
     width: 90vw;
     box-shadow: -1px 4px 20px -6px rgba(0, 0, 0, 0.75);

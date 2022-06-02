@@ -1,10 +1,11 @@
 import styled from 'styled-components';
-import { Chat, DonutLarge, MoreVert, SearchOutlined } from "@material-ui/icons";
+import { SearchOutlined } from "@material-ui/icons";
+import { IconButton } from "@material-ui/core";
 
 export const Container = styled.div`
+    flex: 0.35;
     display: flex;
     flex-direction: column;
-    flex: 0.35;
 `
 export const HeaderWrap = styled.div`
 display: flex;
@@ -18,18 +19,15 @@ align - items: center;
 justify - content: space - between;
 min - width: 10vw;
 `
-export const ChatIcon = styled(Chat)`
-margin - right: 2vw;
-font - size: 24px!important;
-`
-export const DonutLargeIcon = styled(DonutLarge)`
-margin - right: 2vw;
-font - size: 24px!important;
+    `;
+export const ButtonWrap = styled(IconButton)`
+
 `
 export const MoreVertIcon = styled(MoreVert)`
 margin - right: 2vw;
 font - size: 24px!important;
-`
+`;
+
 export const SearchbarWrap = styled.div`
 display: flex;
 align - items: center;
@@ -47,9 +45,10 @@ export const SearchContainer = styled.div`
     border-radius: 20px;
 `
 export const SearchOutlinedIcon = styled(SearchOutlined)`
-    margin-right: 2vw;
-    font-size: 24px !important;
-`
+color: gray;
+padding: 10px;
+`;
+
 export const SearchInput = styled.input`
     border: none;
     outline-width: 0;
