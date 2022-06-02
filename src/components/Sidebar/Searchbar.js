@@ -1,7 +1,7 @@
 import React from 'react'
 import { SearchbarWrap, SearchContainer, SearchInput, SearchOutlinedIcon } from './StyledSidebarElements';
 
-const Search = () => {
+const Searchbar = () => {
     return (
         <SearchbarWrap>
             <SearchContainer>
@@ -15,4 +15,4 @@ const Search = () => {
     );
 }
 
-export default Search;
+export default Searchbar;
