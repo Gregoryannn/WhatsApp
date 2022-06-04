@@ -45,8 +45,6 @@ const Chat = () => {
         }
     }, [roomId]);
 
-    console.log(messages);
-
 
     const sendMessage = (e) => {
         e.preventDefault();
@@ -63,7 +61,7 @@ const Chat = () => {
 
     return (
         <Container>
-            <Header roomName={roomName} seed={seed} />
+            <Header roomName={roomName} seed={seed} messages={messages} />
             <Body messages={messages} userName={user.displayName} />
 
             <Footer

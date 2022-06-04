@@ -8,7 +8,7 @@ import {
     SearchOutlined,
 } from "@material-ui/icons";
 
-const Header = ({ roomName, seed }) => {
+const Header = ({ roomName, seed, messages }) => {
 
 
     return (
@@ -18,7 +18,10 @@ const Header = ({ roomName, seed }) => {
                 alt="avatar"
             />            <HeaderInfo>
                 <h3>{roomName}</h3>
-                <p>Lase seen {""}</p>
+                <p>
+                    Lase seen {""} {new Date(messages[messages.length - 1]?.
+                        timestamp?.toDate()).toUTCString()}
+                </p>
             </HeaderInfo>
             <HeaderRight>
                 <IconButton>
