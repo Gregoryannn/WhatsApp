@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { Avatar, IconButton } from "@material-ui/core";
 import { HeaderContainer, HeaderInfo, HeaderRight } from "./StyledChatElements";
 
@@ -8,12 +8,8 @@ import {
     SearchOutlined,
 } from "@material-ui/icons";
 
-const Header = ({ roomName }) => {
-    const [seed, setSeed] = useState("");
+const Header = ({ roomName, seed }) => {
 
-    useEffect(() => {
-        setSeed(Math.floor(Math.random() * 100));
-    }, [roomName]);
 
     return (
         <HeaderContainer>

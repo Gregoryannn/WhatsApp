@@ -1,5 +1,4 @@
 import React from 'react';
-import { useStateValue } from "../../StateProvider";
 
 import {
     MessageContainer,
@@ -11,29 +10,37 @@ import {
 
 
 
-const Body = ({ messages }) => {
-    const [{ user }, dispatch] = useStateValue();
+const Body = ({ messages, userName }) => {
 
     return (
         <MessageContainer>
-            {messages.map(msg => (
-                msg.name === user.displayName ? (
-                    <MessageSent>
-                        <Name>{msg.name}</Name>
-                        {msg.message}
-                        <Timestamp>{msg.timestamp}</Timestamp>
+            {messages.map((message) =>
+                message.name === userName ? (
+                    <MessageSent key={message.id}>
+                        <Name>{message.name}</Name>
+                        {message.message}
+                        <Timestamp>
+                            {new Date(
+                                message.timestamp?.toDate()
+                            ).toUTCString()}
+                        </Timestamp>
                     </MessageSent>
                 ) : (
-                    <MessageRceived>
-                        <Name>{msg.name}</Name>
-                        {msg.message}
-                        <Timestamp>{msg.timestamp}</Timestamp>
-                    </MessageRceived>
+                        <MessageRceived key={message.id}>
+                            <Name>{message.name}</Name>
+                            {message.message}
+                            <Timestamp>
+                                {new Date(
+                                    message.timestamp?.toDate()
+                                ).toUTCString()}
+                            </Timestamp>
+                        </MessageRceived>
                 )
 
-            ))}
+            )}
+
         </MessageContainer>
     );
-}
+};
 
 export default Body; 
