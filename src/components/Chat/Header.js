@@ -22,7 +22,7 @@ const Header = ({ roomName }) => {
                 alt="avatar"
             />            <HeaderInfo>
                 <h3>{roomName}</h3>
-                <p>Lase seen at...</p>
+                <p>Lase seen {""}</p>
             </HeaderInfo>
             <HeaderRight>
                 <IconButton>

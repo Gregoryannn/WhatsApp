@@ -1,41 +1,47 @@
 import React, { useEffect, useState } from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import styled from "styled-components";
-import Pusher from "pusher-js";
-import axios from "./axios";
+
+// import Pusher from "pusher-js";
+// import axios from "./axios";
+
 import { useStateValue } from "./StateProvider";
-
-
 import Sidebar from "./components/Sidebar";
 import Chat from "./components/Chat";
 import Login from "./components/Login";
 
+
 const App = () => {
-    const [messages, setMessages] = useState([]);
+    // const [messages, setMessages] = useState([]);
     const [{ user }, dispatch] = useStateValue();
 
-    useEffect(() => {
-        axios.get("/messages/sync").then((res) => {
-            setMessages(res.data);
-        });
+// useEffect(() => {
+    //     axios.get("/messages/sync").then((res) => {
+    //         setMessages(res.data);
+    //     });
+    // }, []);
 
-    }, []);
 
-    useEffect(() => {
-        const pusher = new Pusher("163612a7213d95a362bb", {
-            cluster: "mt1",
-        });
-        const channel = pusher.subscribe("messages");
-        channel.bind("inserted", function (newMessage) {
-            setMessages([...messages, newMessage]);
-        });
-        return () => {
-            channel.unbind_all();
-            channel.unsubscribe();
-        };
-    }, [messages]);
+// useEffect(() => {
+    //     const pusher = new Pusher("163612a7213d95a362bb", {
+    //         cluster: "mt1",
+    //     });
 
-    console.log(messages);
+
+  //  const channel = pusher.subscribe("messages");
+    //     channel.bind("inserted", function (newMessage) {
+    //         setMessages([...messages, newMessage]);
+    //     });
+
+//     return () => {
+    //         channel.unbind_all();
+    //         channel.unsubscribe();
+    //     };
+    // }, [messages]);
+
+
+// console.log(messages);
+
 
     return (
         <Main>
@@ -46,10 +52,10 @@ const App = () => {
                     <Sidebar />
                     <Switch>
                         <Route path="/rooms/:roomId">
-                            <Chat messages={messages} />
+                                <Chat /*messages={messages}*/ />
                         </Route>
                         <Route path="/">
-                            <Chat messages={messages} />
+                                <Chat  /*messages={messages}*/ />
                         </Route>
                     </Switch>
                 </Router>
