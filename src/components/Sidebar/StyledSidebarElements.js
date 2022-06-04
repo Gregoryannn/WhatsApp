@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { Link } from "react-router-dom";
 import { SearchOutlined } from "@material-ui/icons";
 import { IconButton } from "@material-ui/core";
 
@@ -8,33 +9,27 @@ export const Container = styled.div`
     flex-direction: column;
 `
 export const HeaderWrap = styled.div`
-display: flex;
-justify - content: space - between;
-padding: 20px;
-border - right: 1px solid lightgray;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    border-right: 1px solid lightgray;
 `
 export const HeaderRight = styled.div`
-display: flex;
-align - items: center;
-justify - content: space - between;
-min - width: 10vw;
-`
-    `;
-export const ButtonWrap = styled(IconButton)`
-
-`
-export const MoreVertIcon = styled(MoreVert)`
-margin - right: 2vw;
-font - size: 24px!important;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-width: 10vw;
 `;
-
+export const ButtonWrap = styled(IconButton)`
+    margin-right: 2vw;
+    font-size: 24px !important;
+`;
 export const SearchbarWrap = styled.div`
-display: flex;
-align - items: center;
-background - color: #f6f6f6;
-height: 39px;
-padding: 10px;
-
+    display: flex;
+    align-items: center;
+    background-color: #f6f6f6;
+    height: 39px;
+    padding: 10px;
 `
 export const SearchContainer = styled.div`
     display: flex;
@@ -45,10 +40,9 @@ export const SearchContainer = styled.div`
     border-radius: 20px;
 `
 export const SearchOutlinedIcon = styled(SearchOutlined)`
-color: gray;
-padding: 10px;
+    color: gray;
+    padding: 10px;
 `;
-
 export const SearchInput = styled.input`
     border: none;
     outline-width: 0;
@@ -60,19 +54,24 @@ export const ChatContainer = styled.div`
     overflow: scroll;
 `
 
-export const ChatCard = styled.div`
-display: flex;
-padding: 20px;
-cursor: pointer;
-border - bottom: 1px solid #f6f6f6;
-    &:hover {
-    background - color: #ebebeb;
-}
+export const StyledLink = styled(Link)`
+    text-decoration: none !important;
+    color: black;
 `
 
+export const ChatCard = styled.div`
+    display: flex;
+    padding: 20px;
+    cursor: pointer;
+    border-bottom: 1px solid #f6f6f6;
+    &:hover {
+        background-color: #ebebeb;
+    }
+`
 export const ChatCardInfo = styled.div`
-margin - left: 15px;
+    margin-left: 15px;
     h2 {
-    font - size: 16px;
-    margin - bottom: 8px;
-}
+        font-size: 16px;
+        margin-bottom: 8px;
+    }
+`

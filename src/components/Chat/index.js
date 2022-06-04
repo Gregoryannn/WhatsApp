@@ -75,14 +75,3 @@ const Chat = () => {
 };
 
 export default Chat;
-
-/*const sendMessage = async (e) => {
-    e.preventDefault();
-    await axios.post("/messages/new", {
-        name: "CCC",
-        message: input,
-        timestamp: "just now",
-        received: false,
-    });
-    setInput("");
-};*/
